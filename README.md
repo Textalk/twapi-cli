@@ -13,13 +13,24 @@ Usage
 -----
 
 ```
-Usage: twapi-cli -w <webshop> [-a <auth>] [-l <lang>] [-u <api-url>] <method> [<param1> <param2> ...]
-       twapi-cli -w <webshop> [-a <auth>] [-l <lang>] [-u <api-url>] theme-update <theme-id> <patch>
-       twapi-cli -w <webshop> [-a <auth>] [-l <lang>] [-u <api-url>] theme-set-js <theme-id> <file>
+Usage: twapi-cli -w <webshop> [-a <auth>] [-l <lang>] [-u <api-url>] [--stage] <method> [<param1> <param2> ...]
+       twapi-cli -w <webshop> [-a <auth>] [-l <lang>] [-u <api-url>] [--stage] theme-update <theme-id> <patch>
+       twapi-cli -w <webshop> [-a <auth>] [-l <lang>] [-u <api-url>] [--stage] theme-set-js <theme-id> <file>
 ```
 
 
-**twapi-cli** can do three things at the moment, generic calls and updating and patching of Theme API blobb.
+**twapi-cli** can do three things at the moment, generic calls, updating and patching of Theme API
+blobb and uploading of script as custom javascript.
+
+#### Options
+
+|  Options       |                             |
+|: --------------|:----------------------------|
+| `-w <webshop>` | Sets webshop context, defaults to 22222 |
+| `-a <auth>`    |  Auth key to use           |
+| `-l <lang>`    | Language code for context  |
+| `-u <api-url>` | TwApi url, defaults to production |
+| `--stage`      | Shorthand for changing Api url to stage |
 
 #### Doing a call
 ```

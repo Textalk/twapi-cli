@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-var argv = require('yargs').argv;
+var argv = require('yargs').boolean('stage').argv;
 var api = require('./lib/api');
 var theme = require('./lib/theme');
 var fs = require('fs');
@@ -13,12 +13,11 @@ if (argv._.length < 1) {
 
 
 var options = {
-  apiUrl:  argv.u || process.env.TWAPI_URL || 'http://shop.textalk.se/backend/jsonrpc/v1',
+  apiUrl:  argv.u || process.env.TWAPI_URL || argv.stage ? 'http://jenkinsstage.textalk.se/backend/jsonrpc/v1' : 'http://shop.textalk.se/backend/jsonrpc/v1',
   webshop: argv.w || process.env.TWAPI_WEBSHOP || 22222
 };
 if (argv.l) { options.language = argv.l; }
 if (argv.a) { options.auth = argv.a; }
-
 
 if (argv._[0] === 'theme-update') {
   // Special case. Theme blobb updating
