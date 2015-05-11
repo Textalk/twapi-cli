@@ -24,8 +24,9 @@ blobb and uploading of script as custom javascript.
 
 #### Options
 
+
 |  Options       |                             |
-|: --------------|:----------------------------|
+|:--------------|:----------------------------|
 | `-w <webshop>` | Sets webshop context, defaults to 22222 |
 | `-a <auth>`    |  Auth key to use           |
 | `-l <lang>`    | Language code for context  |
