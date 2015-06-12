@@ -22,8 +22,16 @@ if (argv.a) { options.auth = argv.a; }
 if (argv._[0] === 'theme-update') {
   // Special case. Theme blobb updating
   var patch;
+  var contents;
+
   try {
-    patch = JSON.parse(argv._[2]);
+    contents = fs.readFileSync(argv._[2]);
+  } catch (e) {
+    contents = argv._[2];
+  }
+
+  try {
+    patch = JSON.parse(contents);
   } catch (e) {
     console.log('Could not parse patch');
     process.exit(1);

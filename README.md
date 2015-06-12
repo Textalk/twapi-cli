@@ -43,8 +43,10 @@ twapi-cli Theme.select '{ "uid": true, "name": true }'
 ```
 
 #### Updating a Theme with a patch
+The patch can be either a text snippet or the path to a json file.
 ```
 twapi-cli -w 32208 theme-update 3857 '{"name": "Foo"}'
+twapi-cli -w 32208 theme-update 3857 theme.json
 ```
 
 #### Settings Theme settings.custom_javascript.script to contents of a file
