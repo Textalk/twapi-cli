@@ -1,16 +1,18 @@
 {
   "name": "twapi-cli",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Textalk Webshop API command line client",
   "main": "twapi.js",
-  "bin": {"twapi-cli": "./twapi.js"},
+  "bin": {
+    "twapi-cli": "./twapi.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "David Jensen <david.lgj@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "deep-extend": "^0.4.0",
+    "deep-extend": "^0.6.0",
     "q": "^1.3.0",
     "q-io": "^1.12.0",
     "yargs": "^3.8.0"
